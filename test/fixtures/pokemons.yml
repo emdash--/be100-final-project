@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  poke_number: 1
+  poke_name: MyString
+  poke_type: MyString
+
+two:
+  poke_number: 1
+  poke_name: MyString
+  poke_type: MyString
