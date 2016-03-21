@@ -24,4 +24,3 @@ Pokemon.create(poke_number:151, poke_name:"Mew", poke_type1:"Psychic", poke_type
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-

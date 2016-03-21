@@ -4,6 +4,5 @@ Rails.application.routes.draw do
 
   resources :pokemons
   root :to => "home#index"
-
   
 end
