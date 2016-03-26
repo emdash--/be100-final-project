@@ -2,6 +2,8 @@ class Kind < ActiveRecord::Base
   has_many :pokemon_kinds
   has_many :pokemons, through: :pokemon_kinds
 
+
+=begin
   def attackedBy(type) 
    processResult(self.combined_type, type) 
   end
@@ -20,7 +22,7 @@ class Kind < ActiveRecord::Base
     else
    end
   end
-
+=end
 
 end
 
