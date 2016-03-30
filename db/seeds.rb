@@ -39,6 +39,7 @@ Kind.create(kind1: "Dark")
 Kind.create(kind1: "Steel")
 Kind.create(kind1: "Fairy")
 
+=begin
 Kind.create(kind2: "Normal")
 Kind.create(kind2: "Fire")
 Kind.create(kind2: "Water")
@@ -57,6 +58,7 @@ Kind.create(kind2: "Dragon")
 Kind.create(kind2: "Dark")
 Kind.create(kind2: "Steel")
 Kind.create(kind2: "Fairy")
+=end
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).

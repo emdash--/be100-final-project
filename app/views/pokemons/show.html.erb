@@ -10,9 +10,17 @@
 </p>
 
 <p>
-  <strong>Type 1</strong> <%= @pokemon.poke_type1 %>
+  <strong>Type 1</strong>: <%= @pokemon.kinds.first.try(:kind) %>
 </p>
 
 <p>
-  <strong>Type 2</strong> <%= @pokemon.poke_type2 %>
+  <strong>Type 2</strong>: <%= @pokemon.kinds.second.try(:kind) %>
+</p>
+
+<p>
+  <strong>Combined Type:</strong> <%= @pokemon.combined_type %>
+</p>
+
+<p>
+  <strong>If you attacked with...:</strong> <%= @pokemon.effectiveness %>
 </p>
