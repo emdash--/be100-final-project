@@ -1,7 +1,12 @@
 <h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+<%= form_tag home_index_path, method: :get %>
+  <%= text_field_tag :search %>
+<%= submit_tag "Search" %>
 
 
+<br />
+<br />
 <table>
   <tr>
     <th>Number</th>
@@ -10,13 +15,6 @@
     <th>Type 2</th>
   </tr>
   <tbody>
-    <% @pokemons.each do |pokemon| %>
-      <tr>
-        <td><%= link_to(pokemon.poke_number, pokemon_path(pokemon)) %></td>
-        <td><%= pokemon.poke_name %></td>
-        <td><%= pokemon.kinds.first.try(:kind) %></td>
-        <td><%= pokemon.kinds.second.try(:kind) %></td>
-      </tr>
-    <% end %>
+    <%= render @pokemons %>
   </tbody>
 </table>

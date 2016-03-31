@@ -26,6 +26,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hirb'
 gem 'table_print'
 gem 'pry'
+gem 'searchkick'
+
+gem 'elasticsearch-rails'
+gem 'elasticsearch-model'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

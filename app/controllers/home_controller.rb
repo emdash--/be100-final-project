@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-   @pokemons = Pokemon.all
+    if params[:search]
+      @pokemons = Pokemon.search(params[:search])
+    else
+      @pokemons = Pokemon.all
+    end
   end
 end

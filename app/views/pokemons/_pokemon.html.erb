@@ -1,0 +1,7 @@
+
+<tr>
+  <td><%= link_to(pokemon.poke_number, pokemon_path(pokemon)) %></td>
+  <td><%= pokemon.poke_name %></td>
+  <td><%= pokemon.kinds.first.try(:kind) %></td>
+  <td><%= pokemon.kinds.second.try(:kind) %></td>
+</tr>

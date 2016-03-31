@@ -5,13 +5,6 @@ class Kind < ActiveRecord::Base
   has_many :pokemon_kinds
   has_many :pokemons, through: :pokemon_kinds
 
-
-
-  private
-  def pokemon_params
-    params.required(:pokemon).permit(:poke_number, :poke_name, :poke_type1, :poke_type2, :id)
-  end
-
 end
 
 
