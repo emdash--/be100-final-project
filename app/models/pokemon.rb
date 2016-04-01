@@ -2,8 +2,6 @@ class Pokemon < ActiveRecord::Base
   has_many :pokemon_kinds
   has_many :kinds, through: :pokemon_kinds
 
-  #include Elasticsearch::Model
-  #searchkick
 
   def self.search(search)
     where("poke_name LIKE ?", "%#{search}%")

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327143938) do
+ActiveRecord::Schema.define(version: 20160401120244) do
 
   create_table "kinds", force: :cascade do |t|
     t.string   "kind"
@@ -35,6 +35,13 @@ ActiveRecord::Schema.define(version: 20160327143938) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "poke_type2"
+  end
+
+  create_table "search_suggestions", force: :cascade do |t|
+    t.string   "term"
+    t.integer  "popularity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
