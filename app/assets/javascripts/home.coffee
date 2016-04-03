@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
-  $('#search').autocomplete
-    # source: [ "test", "test2", "abc" ]
+# jQuery ->
+#  $('#search').autocomplete
+#    source: [ "test", "test2", "abc" ]
 

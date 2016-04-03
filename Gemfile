@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'hirb'
 gem 'table_print'
 gem 'pry'
+gem 'rails4-autocomplete'
 
 
 # Use ActiveModel has_secure_password
