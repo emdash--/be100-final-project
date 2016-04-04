@@ -1,4 +1,5 @@
 
+=begin
 #POKEMON
 Pokemon.create(poke_number:4, poke_name:"Squirtle", poke_type1:"Water", poke_type2:"")
 
@@ -39,7 +40,7 @@ Kind.create(kind1: "Dark")
 Kind.create(kind1: "Steel")
 Kind.create(kind1: "Fairy")
 
-=begin
+
 Kind.create(kind2: "Normal")
 Kind.create(kind2: "Fire")
 Kind.create(kind2: "Water")

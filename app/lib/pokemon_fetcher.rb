@@ -1,35 +1,42 @@
-class PokemonFetcher 
-  # going to act as service
+class PokemonFetcher
+  # require 'kind'
+
   attr_reader :ids
 
   def initialize
-    @ids = (1..10).to_a
+    @ids = (1..151).to_a
   end
 
   def fetch
-    ids.each do |id|
+    puts "fetched"
+    results = []
+
+    @ids.each do |id|
       url = "http://pokeapi.co/api/v2/pokemon/#{id}/"
       results << JSON.parse(RestClient.get(url))
     end
-
-    pokemon_names = []
-    pokemon_ids = []
-
+    
     results.each do |result|
-      pokemon_kinds = []
 
+      # Insert Pokemon name into Pokemon database
       name = result["name"].capitalize
-      pokemon_names << name
-      id = result["id"]
-      
-      pokemon_ids << id
+      pokemon = Pokemon.create(poke_name: name)
 
+      # Get Pokemon's type into Kind database
       types = result["types"].each do |type|
-        pokemon_kinds << type["type"]["name"].capitalize
+        pokemon_type = type["type"]["name"].capitalize
+        
+        #checking if kind already exists in data base
+        if Kind.exists?(kind: pokemon_type)
+          # find Kind 
+          kind = Kind.where(kind: pokemon_type)
+          pokemon.kinds << kind
+        else
+          kind = Kind.create(kind: pokemon_type)
+          pokemon.kinds << kind
+        end
       end
-
     end
-    puts pokemon_kinds.inspect
 
   end
 

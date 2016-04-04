@@ -27,6 +27,7 @@ gem 'hirb'
 gem 'table_print'
 gem 'pry'
 gem 'rails4-autocomplete'
+gem 'rest-client'
 
 
 # Use ActiveModel has_secure_password
