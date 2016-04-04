@@ -4,7 +4,7 @@ class PokemonFetcher
   attr_reader :ids
 
   def initialize
-    @ids = (1..151).to_a
+    @ids = (1..20).to_a
   end
 
   def fetch
