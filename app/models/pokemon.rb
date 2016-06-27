@@ -78,6 +78,123 @@ class Pokemon < ActiveRecord::Base
       "Fire: 1/2, Water: 1/2, Electric: 0, Grass: 4, Poison: 1/2, Rock: 1/2, Steel: 1/2"
     elsif (combined_type == "WaterFlying" || combined_type == "FlyingWater")
       "Fire: 1/2, Water: 1/2, Electric: x4, Fighting: 1/2, Ground: 0, Bug: 1/2, Rock: x2, Steel: 1/2"
+    elsif (combined_type == "WaterPsychic" || combined_type == "PsychicWater")
+      "Fire: 1/2, Water: 1/2, Electric: x2, Grass: x2, Ice: 1/2, Fighting: 1/2, Psychic: 1/2, Bug: x2, Ghost: x2, Dark: x2, Steel: 1/2"
+    elsif (combined_type == "WaterBug" || combined_type == "BugWater")
+      "Water: 1/2, Electric: x2, Ice: 1/2, Fighting: 1/2, Ground: 1/2, Flying: x2, Rock: x2, Steel: 1/2"
+    elsif (combined_type == "WaterRock" || combined_type == "RockWater")
+      "Normal: 1/2, Fire: 1/4, Electric: x2, Grass: x4, Ice: 1/2, Fighting: x2, Poison: 1/2, Ground: x2, Flying: 1/2"
+    elsif (combined_type == "WaterGhost" || combined_type == "GhostWater")
+      "Normal: 0, Fire: 1/2, Water: 1/2, Electric: x2, Grass: x2, Ice: 1/2, Fighting: 0, Poison: 1/2, Bug: 1/2, Ghost: x2, Dark: x2, Steel: 1/2"
+    elsif (combined_type == "WaterDragon" || combined_type == "DragonWater")
+      "Fire: 1/4, Water: 1/4, Dragon: x2, Steel: 1/2 Fairy: x2"
+    elsif (combined_type == "WaterDark" || combined_type == "DarkWater")
+      "Fire: 1/2, Water: 1/2, Electric: x2, Grass: x2, Ice: 1/2, Fighting: x2, Psychic: 0, Bug: x2, Ghost: 1/2, Dark: 1/2, Steel: 1/2, Fairy: x2"
+    elsif (combined_type == "WaterSteel" || combined_type == "SteelWater")
+      "Normal: 1/2, Water: 1/2, Electric: x2, Ice: 1/4, Fighting: x2, Poison: 0, Ground: 2, Flying: 1/2, Psychic: 1/2, Bug: 1/2, Rock: 1/2, Dragon: 1/2, Steel: 1/4, Fairy: 1/2"
+    elsif (combined_type == "WaterFairy" || combined_type == "FairyWater")
+      "Fire: 1/2, Water: 1/2, Electric: x2, Grass: x2, Ice: 1/2, Fighting: 1/2, Poison: x2, Bug: 1/2, Dragon: 0, Dark: 1/2"
+    elsif (combined_type == "ElectricGrass" || combined_type == "GrassElectric")
+      "Fire: x2, Water: 1/2, Electric: 1/4, Grass: 1/2, Ice: x2, Poison: x2, Bug: x2, Steel: 1/2"
+    elsif (combined_type == "ElectricIce" || combined_type == "IceElectric")
+      "Fire: x2, Electric: 1/2, Ice: 1/2, Fighting: x2, Flying: 1/2, Rock: x2"
+    elsif (combined_type == "ElectricGround" || combined_type == "GroundElectric")
+      "Water: x2, Electric: 0, Grass: x2, Ice: x2, Poison: 1/2, Ground: x2, Flying: 1/2, Rock: 1/2, Steel: 1/2"
+    elsif (combined_type == "ElectricBug" || combined_type == "BugElectric")
+      "Fire: x2, Electric: 1/2, Grass: 1/2, Fighting: 1/2, Rock: x2, Steel: 1/2"
+    elsif (combined_type == "ElectricGhost" || combined_type == "GhostElectric")
+      "Normal: 0, Electric: 1/2, Fighting: 0, Poison: 1/2, Ground: x2, Flying: 1/2, Bug: 1/2, Ghost: x2, Dark: x2, Steel: 1/2"
+    elsif (combined_type == "ElectricDragon" || combined_type == "DragonElectric")
+      "Fire: 1/2, Water: 1/2, Electric: 1/4, Grass: 1/2, Ice: x2, Ghost: x2, Flying: 1/2, Dragon: x2, Steel: 1/2, Fairy: x2"
+    elsif (combined_type == "ElectricSteel" || combined_type == "SteelElectric")
+      "Normal: 1/2, Fire: x2, Electric: 1/2, Grass: 1/2, Ice: 1/2, Fighting: x2, Poison: 0, Ground: x4, Flying: 1/4, Psychic: 1/2, Bug: 1/2, Rock: 1/2, Dragon: 1/2, Steel: 1/4, Fairy: 1/2"
+    elsif (combined_type == "ElectricFairy" || combined_type == "FairyElectric")
+      "Electric: 1/2, Fighting: 1/2, Poison: x2, Ground: x2, Flying: 1/2, Bug: 1/2, Dragon: 0, Dark: 1/2"
+    elsif (combined_type == "GrassIce" || combined_type == "IceGrass")
+      "Fire: x4, Water: 1/2, Electric: 1/2, Grass: 1/2, Fighting: x2, Poison: x2, Ground: 1/2, Flying: x2, Bug: x2, Rock: x2, Steel: x2"
+    elsif (combined_type == "GrassFighting" || combined_type == "FightingGrass")
+      "Fire: x2, Water: 1/2, Electric: 1/2, Grass: 1/2, Ice: x2, Poison: x2, Ground: 1/2, Flying: x4, Psychic: x2, Rock: 1/2, Dark: 1/2, Fairy: x2"
+    elsif (combined_type == "GrassPoison" || combined_type == "PoisonGrass")
+      "Fire: x2, Water: 1/2, Electric: 1/2, Grass: 1/4, Ice: x2, Fighting: 1/2, Flying: x2, Poison: x2, Fairy: 1/2"
+    elsif (combined_type == "GrassGround" || combined_type == "GroundGrass")
+      "Fire: x2, Electric: 0, Ice: x4, Ground: 1/2, Flying: x2, Bug: x2, Rock: 1/2"
+    elsif (combined_type == "GrassFlying" || combined_type == "FlyingGrass")
+      "Fire: x2, Water: 1/2, Electric: 1/4, Ice: x4, Fighting: 1/2, Poison: x2, Ground: 0, Flying: x2, Rock: x2"
+    elsif (combined_type == "GrassPsychic" || combined_type == "PsychicGrass")
+      "Fire: x2, Water: 1/2, Electric: 1/2, Grass: 1/2, Ice: x2, Fighting: 1/2, Poison: x2, Ground: 1/2, Flying: x2, Psychic: 1/2, Bug: x4, Ghost: x2, Dark: x2"
+    elsif (combined_type == "GrassBug" || combined_type == "BugGrass")
+      "Fire: x4, Water: 1/2, Electric: 1/2, Grass: 1/4, Ice: x2, Fighting: 1/2, Poison: x2, Ground: 1/4, Flying: x4, Bug; x2, Rock: x2"
+    elsif (combined_type == "GrassRock" || combined_type == "RockGrass")
+      "Fire: 1/2, Electric: 1/2, Ice: x2, Fighting: x2,Bug: x2, Steel: x2"
+    elsif (combined_type == "GrassGhost" || combined_type == "GhostGrass")
+      "Normal: 0, Fire: x2, Water: 1/2, Electric: 1/2, Grass: 1/2, Ice: x2, Fighting: 0, Ground: 1/2, Flying: x2, Ghost: x2, Dark: x2"
+    elsif (combined_type == "GrassDragon" || combined_type "DragonGrass")
+      "Water: 1/4, Electric: 1/4, Grass: 1/4, Ice: x2, Poison: x2, Ground: 1/2, Flying: x2, Bug: x2, Dark: x2, Fairy: x2"
+    elsif (combined_type == "GrassDark" || combined_type == "DarkGrass")
+      "Fire: x2,Water: 1/2, Electric: 1/2, Grass: 1/2, Ice: x2, Fighting: x2, Poison: x2, Ground: 1/2, Flying: x2, Psychic: 0, Bug: x4, Ghost: 1/2, Dark: 1/2, Fairy: x2"
+    elsif (combined_type == "GrassSteel" || combined_type == "SteelGrass")
+      "Normal: 1/2, Fire: x4, Water: 1/2, Electric: 1/2, Ice: 1/4, Fighting: x2, Poison: 0, Psychi: 1/2, Rock: 1/2, Dragon: 1/2, Steel: 1/2, Fairy: 1/2"
+    elsif (combined_type == "GrassFairy" || combined_type == "FairyGrass")
+      "Fire: x2, Water: 1/2, Electric: 1/2, Grass: 1/2, Ice: x2, Fighting: 1/2, Poison: x4, Ground: 1/2, Flying: x2, Dragon: 0, Dark: 1/2, Steel: x2"
+    elsif (combined_type == "IceGround" || combined_type == "GroundIce")
+      "Fire: x2, Water: x2, Electric: 0, Grass: x2, Fighting: x2, Poison: 1/2, Steel: x2"
+    elsif (combined_type == "IceFlying" || combined_type == "FlyingIce")
+      "Fire: x2, Electric: x2, Grass: 1/4, Ground: 0, Bug: 1/2, Rock: x4, Steel: x2"
+    elsif (combined_type == "IcePsychic" || combined_type == "PsychicIce")
+      "Fire: x2, Ice: 1/2, Psychic: 1/2, Bug: x2, Rock: x2, Ghost: x2, Dark: x2, Steel: x2"
+    elsif (combined_type == "IceRock" || combined_type == "RockIce")
+      "Normal: 1/2, Water: x2, Grass: x2, Ice: 1/2, Fighting: x4, Poison: 1/2, Ground: x2, Flying: 1/2, Rock: x2, Steel: x4"
+    elsif (combined_type == "IceGhost" || combined_type == "GhostIce")
+      "Normal: 0, Fire: x2, Ice: 1/2, Fighting: 0, Poison: 1/2, Bug: 1/2, Rock: x2, Ghost: x2, Dark: x2, Steel: x2"
+    elsif (combined_type == "IceDragon" || combined_type == "DragonIce")
+      "Water: 1/2, Electric: 1/2, Grass: 1/2, Fighting: x2, Rock: x2, Dragon: x2, Steel: x2, Fairy: x2"
+    elsif (combined_type == "IceDark" || combined_type == "DarkIce")
+      "Fire: x2, Ice: 1/2, Fighting: x4, Psychic: 0, Bug: x2, Rock: x2, Ghost: 1/2, Dark: 1/2, Steel: x2, Fairy: x2"
+    elsif (combined_type == "FightingPoison" || combined_type == "PoisonFighting")
+      "Grass: 1/2, Fighting: 1/2, Poison: 1/2, Ground: x2, Flying: x2, Psychic: x4, Bug: 1/4, Rock: 1/2, Dark: 1/2"
+    elsif (combined_type == "FightingFlying" || combined_type == "FlyingFighting")
+      "Electric: x2, Grass: 1/2, Ice: x2, Fighting: 1/2, Ground: 0, Flying: x2, Psychic: x2, Bug: 1/4, Dark: 1/2, Fairy: x2"
+    elsif (combined_type == "FightingPsychic" || combined_type == "PsychicFighting")
+      "Fighting: 1/2, Flying: x2, Rock: 1/2, Ghost: x2, Fairy: x2"
+    elsif (combined_type == "FightingBug" || combined_type == "BugFighting")
+      "Fire: x2, Grass: 1/2, Fighting: 1/2, Ground: 1/2, Flying: x4, Psychic: x2, Bug: 1/2, Dark: 1/2, Fairy: x2"
+    elsif (combined_type == "FightingRock" || combined_type == "RockFighting")
+      "Normal: 1/2, Fire: 1/2, Water: x2, Grass: x2, Fighting: x2, Poison: 1/2, Ground: x2, Psychic: x2, Bug: 1/2, Rock: 1/2, Dark: 1/2, Steel: x2, Fairy: x2"
+    elsif (combined_type == "FightingDark" || combined_type == "DarkFighting")
+      "Fighting: x2, Flying: x2, Psychic: 0, Rock: 1/2, Ghost: 1/2, Dark: 1/4, Fairy: x4"
+    elsif (combined_type == "FightingSteel" || combined_type == "SteelFighting")
+      "Normal: 1/2, Fire: x2, Grass: 1/2, Ice: 1/2, Fighting: 2, Poison: 0, Ground: x2, Bug: 1/4, Rock: 1/4, Dragon: 1/2, Dark: 1/2, Steel: 1/2"
+    elsif (combined_type == "PoisonGround" || combined_type == "GroundPoison")
+      "Water: x2, Electric: 0, Ice: x2, Fighting: 1/2, Poison: 1/4, Ground: x2, Psychic: x2, Bug: 1/2, Rock: 1/2, Fairy: 1/2"
+    elsif (combined_type == "PoisonFlying" || combined_type == "FlyingPoison")
+      "Electric: x2, Grass: 1/4, Ice: x2, Fighting: 1/4, Poison: 1/2, Ground: 0, Psychic: x2, Bug: 1/4, Rock: x2, Fairy: 1/2"
+    elsif (combined_type == "PoisonBug" || combined_type == "BugPoison")
+      "Fire: x2, Grass: 1/4, Fighting: 1/4, Poison: 1/2, Flying: x2, Psychic: x2, Bug: 1/2, Rock: x2, Fairy: 1/2"
+    elsif (combined_type == "PoisonGhost" || combined_type == "GhostPoison")
+      "Normal: 0, Grass: 1/2, Fighting: 0, Poison: 1/4, Ground: x2, Psychic: x2, Bug: 1/4, Ghost: x2, Dark: x2, Fairy: 1/2"
+    elsif (combined_type == "PoisonDragon" || combined_type == "DragonPoison")
+      "Fire: 1/2, Water: 1/2, Electric: 1/2, Grass: 1/4, Ice: x2, Fighting: 1/2, Poison: 1/2, Ground: x2, Psychic: x2, Bug: 1/2, Dragon: x2"
+    elsif (combined_type == "PoisonDark" || combined_type == "DarkPoison")
+      "Grass: 1/2, Poison: 1/2, Ground: x2, Psychic: 0, Ghost: 1/2, Dark: 1/2"
+    elsif (combined_type == "GroundFlying" || combined_type == "FlyingGround")
+      "Water: x2, Electric: 0, Ice: x4, Fighting: 1/2, Poison: 1/2, Ground: 0, Bug: 1/2"
+    elsif (combined_type == "GroundPsychic" || combined_type == "PsychicGround")
+      "Water: x2, Electric: 0, Grass: x2, Ice: x2, Fighting: 1/2, Poison: 1/2, Psychic: 1/2, Bug: x2, Rock: 1/2, Ghost: x2, Dark: x2"
+    elsif (combined_type == "GroundBug" || combined_type == "BugGround")
+      "Fire: x2, Water: x2, Electric: 0, Ice: x2, Fighting: 1/2, Poison: 1/2, Ground: 1/2, Flying: x2"
+    elsif (combined_type == "GroundRock" || combined_type == "RockGround")
+      "Normal: 1/2, Fire: 1/2, Water: x4, Electric: 0, Grass: x4, Ice: x2, Fighting: x2, Poison: 1/4, Ground: x2, Flying: 1/2, Rock: 1/2, Steel: x2"
+    elsif (combined_type == "GroundGhost" || combined_type == "GhostGround")
+      "Normal: 0, Water: x2, Electric: 0, Grass: x2, Ice: x2, Fighting: 0, Poison: 1/4, Bug: 1/2, Rock: 1/2, Ghost: x2, Dark: x2"
+    elsif (combined_type == "GroundDragon" || combined_type == "DragonGround")
+      "Fire: 1/2, Electric: 0, Ice: x4, Poison: 1/2, Rock: 1/2, Dragon: x2, Fairy: x2"
+    elsif (combined_type == "GroundDark" || combined_type == "DarkGround")
+      "Water: x2, Electric: 0, Grass: x2, Ice: x2, Fighting: x2, Poison: 1/2, Psychic: 0, Bug: x2, Rock: 1/2, Ghost: 1/2, Dark: 1/2, Fairy: x2"
+    elsif (combined_type == "GroundSteel" || combined_type == "SteelGround")
+      "Normal: 1/2, Fire: x2, Water: x2, Electric: 0, Fighting: x2, Poison: 0, Ground x2, Flying: 1/2, Psychic: 1/2, Bug: 1/2, Rock: 1/4, Dragon: 1/2, Steel: 1/2, Fairy: 1/2"
+
+
+
     # SINGLE TYPES #
     elsif (combined_type == "Normal")
       "Fighting: x2, Ghost: 0"
